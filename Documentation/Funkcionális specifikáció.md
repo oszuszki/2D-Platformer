@@ -13,7 +13,7 @@
 - Gyors betöltődés.
 - Használható menü.
 - Egyértelmű játékvezérlés.
-- Pixelart dizájn.
+- Pixel art dizájn.
 - Minimalista kinézet.
 - Könnyen alakítható pályák.
 - A kamera kövesse a karaktert játék közben.
@@ -44,6 +44,11 @@ A "Start" gombra kattintva elkezdődik a játék, ahol lehetőség van W,A,S,D-v
 platformokon ugrálva haladhatunk a cél felé különböző akadályokkal megküzdve, a cél elérésével a játékos dönti el, 
 hogy kilép a jétékból, vagy újat kezd.
 
-A játék kinézete minimális, pixelart stílusu, a gyors betöltődés és az egyszerű kivitelezés érdekében.
+A játék kinézete minimális, pixel art stílusu, a gyors betöltődés és az egyszerű kivitelezés érdekében.
 
 # 11. Fogalomszótár
+
+- Pixel art - digitális művészet olyan formája, ahol a képeket pixel szinten szerkesztik. Ez a stílus a 8 és 16 bites számítógépekből, videojáték-konzolokból
+származik.
+- 2D-s sík - egy X, vízszintes valamint egy Y, függőleges koordinátából álló tér.
+- Map - térkép, jelen esetben minden egyes tereptárgyat jelent, ami nem az irányított karakter.
