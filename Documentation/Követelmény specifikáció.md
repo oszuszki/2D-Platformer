@@ -13,7 +13,7 @@
 - Pixelart dizájn.
 - Minimalista kinézet.
 - Könnyen alakítható pályák.
-- A kamera kövesse az karaktert játék közben.
+- A kamera kövesse a karaktert játék közben.
 # 7. Irányított és szabad szöveges riportok szövege
 
 # 8. Fogalomszótár
