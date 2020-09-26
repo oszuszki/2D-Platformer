@@ -12,7 +12,7 @@
 - Egyértelmű játékvezérlés.
 - Pixelart dizájn.
 - Minimalista kinézet.
-- Könyen alakítható pályák.
+- Könnyen alakítható pályák.
 - A kamera kövesse az karaktert játék közben.
 # 7. Irányított és szabad szöveges riportok szövege
 
