@@ -22,6 +22,14 @@
 
 # 8. Képernyőtervek
 
+![menu](menu.png)
+
+  -A menühöz három egyszerű gomb elég, letisztult és érthető, egymás alá helyezve. Innen elindíthatjuk a játékot, kikapcsolhatjuk vagy akár segítséget kérhetünk.
+
+![Map](Map.png)
+
+  -A mappon karakterünk mozgatásával áthaladunk asz akadályokon. 
+
 # 9. Forgatókönyvek
 
 # 10. Funkció – követelmény megfeleltetés
