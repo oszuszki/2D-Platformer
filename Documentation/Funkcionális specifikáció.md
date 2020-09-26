@@ -28,7 +28,7 @@
 
 ![Map](Map.png)
 
-  -A mappon karakterünk mozgatásával áthaladunk asz akadályokon. 
+  -A mappon karakterünk mozgatásával áthaladunk az akadályokon. 
 
 # 9. Forgatókönyvek
 
