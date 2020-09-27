@@ -29,6 +29,8 @@
 
 # 7. Használati esetek
 
+![Diagram](Diagram.png)
+
 # 8. Képernyőtervek
 
 ![menu](menu.png)
