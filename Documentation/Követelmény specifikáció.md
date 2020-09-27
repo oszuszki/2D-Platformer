@@ -2,15 +2,15 @@
 - Mára már meghaladja a 3 milliárd embert, azon embereknek a száma, 
 akik játszanak valamilyen számítógépes játékkal és ezen emberek száma folyamatosan csak nő,
 (https://www.dfcint.com/product/video-game-consumer-segmentation-2/).
-- Ez azt jelenti , hogy már nem csak a fiatalok körében elterjedtek a videójátékok,
+- Ez azt jelenti, hogy már nem csak a fiatalok körében elterjedtek a videójátékok,
 hanem a középkorúak illetve az idősebb körökben is. Ez a sok egy óriási piaci lehetőséget nyúlt.
-- Azokat az embereket szeretnénk megcélozni, akik egy lazább napon, csak ki szeretnénak kapcsolódni nem kell semmilyen háttér ismerettel rendelkezniük,
+- Azokat az embereket szeretnénk megcélozni, akik egy lazább napon, csak ki szeretnének kapcsolódni nem kell semmilyen háttér ismerettel rendelkezniük,
  csak leülni és pár órát eltölteni. 
 
 # 2. Vágyálomrendszer leírása
 - Célunk egy olyan játék készítése, ami megfelelően egyszerű ahoz, hogy bárki leülhessen elé, ez egy 2Dplatformer játék lesz, aminek a célja a pálya jobb oldalába való eljutás.
 - A játék offline fog futni a játékos számítógépén.
-- A UI-nak egyszerűnek és letisztultak kell lennie, hogy mindenki számmára érthető legyen a játék kezelése, illetve a célja.
+- A UI-nak egyszerűnek és letisztultak kell lennie, hogy mindenki számára érthető legyen a játék kezelése, illetve a célja.
 
 # 3. Rendszerre vonatkozó pályázat/törvények/rendeletek/szabványok és ajánlások
 
