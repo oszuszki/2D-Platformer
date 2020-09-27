@@ -6,9 +6,13 @@
 
 # 4. Jelenlegi üzleti folyamatok modellje
 
+- A játék jelenleg sehol sem érhető el.
+- A játék tervezés alatt áll.
+
 # 5. Igényelt üzleti folyamatok modellje
 
-- A játék bármikor játszható, ha rendelkezünk a játék másolatával és a megfelelő erőforrásokkal.
+- A játék bármikor játszható.
+- A játék használatához, szükséges lesz egy eszkőz, amely biztosítja a szükséges erőforrásokat. Illetve szükséges a program egy másolatával rendelkezni.
 - A játék alatt a játékos célja minél több akadályt kikerülni és messzebb jutni a játék pályán.
 - A játék akkor ér véget, ha: a játékosnak nem sikerül kikerülni az akadály; az eszköz, amit játék közben használ meghibásodik.
 - A játékot befejezően, a játékos dönthet, hogy elhagyja a játékot, vagy újra próbálja.
