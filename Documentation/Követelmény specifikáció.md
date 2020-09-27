@@ -4,7 +4,14 @@
 
 # 3. Rendszerre vonatkozó pályázat/törvények/rendeletek/szabványok és ajánlások
 
+# 4. Jelenlegi üzleti folyamatok modellje
+
 # 5. Igényelt üzleti folyamatok modellje
+
+- A játék bármikor játszható, ha rendelkezünk a játék másolatával és a megfelelő erőforrásokkal.
+- A játék alatt a játékos célja minél több akadályt kikerülni és messzebb jutni a játék pályán.
+- A játék akkor ér véget, ha: a játékosnak nem sikerül kikerülni az akadály; az eszköz, amit játék közben használ meghibásodik.
+- A játékot befejezően, a játékos dönthet, hogy elhagyja a játékot, vagy újra próbálja.
 
 # 6. Követelménylista
 - Gyors betöltődés.
