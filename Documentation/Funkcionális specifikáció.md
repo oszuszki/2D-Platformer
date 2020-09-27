@@ -41,6 +41,12 @@
 
 # 9. Forgatókönyvek
 
+A játék megnyitásakor a felhasználó három lehetőség közűl választhat, melyek a : Start; Help; Quit. 
+  -A 'Start' gomb megnyomásával értelemszerűen elkezdődik a játék, ami az első 'map' felületére teszi az irányítható karakterünket. Ezt a karaktert kell eljuttasuk a pálya végéig anélkűl, hogy meghalna a karakterünk. A mappokon külömböző ügyességi feladatok lesznek amit a karakter mozgatás és ugrás segítségével tudunk elvégezni. A mappon töbféle akadályt is fell lesz állítva a felhasználói élmény érdekében.  
+  -A 'Help' gomb megnyomásával egy egyszerű magyarázat lesz a karakterünk mozgatásához tartozó gombokról. Ezek a gombok lesznek a [W, A, S, D].
+  -A 'Quit' gomb magától érthetően pedig a játék kikapcsolása funkciót fogja ellátni. 
+
+
 # 10. Funkció – követelmény megfeleltetés
 
 Játék megynyitása után, megjelenik egy egyszerü három menüpontból álló menü:
