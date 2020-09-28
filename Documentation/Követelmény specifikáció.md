@@ -39,4 +39,6 @@ hanem a középkorúak illetve az idősebb körökben is. Ez a sok egy óriási 
 - Pixel art - digitális művészet olyan formája, ahol a képeket pixel szinten szerkesztik. Ez a stílus a 8 és 16 bites számítógépekből, videojáték-konzolokból
 származik.
 - 2D-s sík - egy X, vízszintes valamint egy Y, függőleges koordinátából álló tér.
-- UI - Felhaználói felület, az a konkrét rendszer, amellyel a felhasználónak érintkeznie kell, amikor az adott terméket, vagy szolgáltatást igénybe veszi
+- UI - Felhaználói felület, az a konkrét rendszer, amellyel a felhasználónak érintkeznie kell, amikor az adott terméket, vagy szolgáltatást igénybe veszi.
+- Offline - Az online ellentétje, azaz kapcsolattal nem rendelkező és/vagy nem elérhető rendszerek, eszközök leírására használt jelző. Az offline átvitt értelemben azokat a folyamatokat, fogalmakat is jelenti, amelyek működésükben az Internettől független módon léteznek vagy működnek.
+- Platformer - A platformjáték (más néven platformer vagy Jump ’n’ Run) egy videójáték-műfaj, az akciójáték alműfaja. A játékos által irányított karakternek platformokon keresztül kell ugrálnia és/vagy különböző akadályokat kell átugrania. A játékos feladata, hogy a karakterével megfelelő időben ugorjon, hogy tovább tudjon menni vagy ne essen le. Az ugráson kívül más mozgáselem is szerepelhet mint az úszás, mászás vagy repülés. Platformjátéknak nevezhető az olyan játék, aminek szerves részét képezi a platformokon való ugrálás.
