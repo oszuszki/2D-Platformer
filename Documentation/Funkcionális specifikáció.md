@@ -14,14 +14,12 @@ hanem a középkorúak illetve az idősebb körökben is. Ez a sok egy óriási 
 - jó lenne ha lenne egy pontrendszer is a játékban. 
 - A UI-nak egyszerűnek és letisztultak kell lennie, hogy mindenki számára érthető legyen a játék kezelése, illetve a célja.
 
-# 3. Rendszerre vonatkozó pályázat/törvények/rendeletek/szabványok és ajánlások
-
-# 4. Jelenlegi üzleti folyamatok modellje
+# 3. Jelenlegi üzleti folyamatok modellje
 
 - A játék jelenleg sehol sem érhető el.
 - A játék tervezés alatt áll.
 
-# 5. Igényelt üzleti folyamatok modellje
+# 4. Igényelt üzleti folyamatok modellje
 
 - A játék bármikor játszható.
 - A játék használatához, szükséges lesz egy eszkőz, amely biztosítja a szükséges erőforrásokat. Illetve szükséges a program egy másolatával rendelkezni.
@@ -29,7 +27,7 @@ hanem a középkorúak illetve az idősebb körökben is. Ez a sok egy óriási 
 - A játék akkor ér véget, ha: a játékosnak nem sikerül kikerülni az akadály; az eszköz, amit játék közben használ meghibásodik.
 - A játékot befejezően, a játékos dönthet, hogy elhagyja a játékot, vagy újra próbálja.
 
-# 6. Követelménylista
+# 5. Követelménylista
 
 - Gyors betöltődés.
 - Használható menü.
@@ -39,11 +37,11 @@ hanem a középkorúak illetve az idősebb körökben is. Ez a sok egy óriási 
 - Könnyen alakítható pályák.
 - A kamera kövesse a karaktert játék közben.
 
-# 7. Használati esetek
+# 6. Használati esetek
 
 ![Diagram](Diagram.png)
 
-# 8. Képernyőtervek
+# 7. Képernyőtervek
 
 ![menu](menu.png)
 
@@ -53,7 +51,7 @@ hanem a középkorúak illetve az idősebb körökben is. Ez a sok egy óriási 
 
   -A mappon karakterünk mozgatásával áthaladunk az akadályokon. 
 
-# 9. Forgatókönyvek
+# 8. Forgatókönyvek
 
 A játék megnyitásakor a felhasználó három lehetőség közűl választhat, melyek a : Start; Help; Quit. 
   -A 'Start' gomb megnyomásával értelemszerűen elkezdődik a játék, ami az első 'map' felületére teszi az irányítható karakterünket. Ezt a karaktert kell eljuttasuk a pálya végéig anélkűl, hogy meghalna a karakterünk. A mappokon külömböző ügyességi feladatok lesznek amit a karakter mozgatás és ugrás segítségével tudunk elvégezni. A mappon töbféle akadályt is fell lesz állítva a felhasználói élmény érdekében.  
@@ -61,7 +59,7 @@ A játék megnyitásakor a felhasználó három lehetőség közűl választhat,
   -A 'Quit' gomb magától érthetően pedig a játék kikapcsolása funkciót fogja ellátni. 
 
 
-# 10. Funkció – követelmény megfeleltetés
+# 9. Funkció – követelmény megfeleltetés
 
 Játék megynyitása után, megjelenik egy egyszerü három menüpontból álló menü:
 
@@ -75,9 +73,12 @@ hogy kilép a jétékból, vagy újat kezd.
 
 A játék kinézete minimális, pixel art stílusu, a gyors betöltődés és az egyszerű kivitelezés érdekében.
 
-# 11. Fogalomszótár
+# 10. Fogalomszótár
 
 - Pixel art - digitális művészet olyan formája, ahol a képeket pixel szinten szerkesztik. Ez a stílus a 8 és 16 bites számítógépekből, videojáték-konzolokból
 származik.
 - 2D-s sík - egy X, vízszintes valamint egy Y, függőleges koordinátából álló tér.
 - Map - térkép, jelen esetben minden egyes tereptárgyat jelent, ami nem az irányított karakter.
+- UI - Felhaználói felület, az a konkrét rendszer, amellyel a felhasználónak érintkeznie kell, amikor az adott terméket, vagy szolgáltatást igénybe veszi.
+- Offline - Az online ellentétje, azaz kapcsolattal nem rendelkező és/vagy nem elérhető rendszerek, eszközök leírására használt jelző. Az offline átvitt értelemben azokat a folyamatokat, fogalmakat is jelenti, amelyek működésükben az Internettől független módon léteznek vagy működnek.
+- Platformer - A platformjáték (más néven platformer vagy Jump ’n’ Run) egy videójáték-műfaj, az akciójáték alműfaja. A játékos által irányított karakternek platformokon keresztül kell ugrálnia és/vagy különböző akadályokat kell átugrania. A játékos feladata, hogy a karakterével megfelelő időben ugorjon, hogy tovább tudjon menni vagy ne essen le. Az ugráson kívül más mozgáselem is szerepelhet mint az úszás, mászás vagy repülés. Platformjátéknak nevezhető az olyan játék, aminek szerves részét képezi a platformokon való ugrálás.
