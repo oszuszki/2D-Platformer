@@ -12,14 +12,12 @@ hanem a középkorúak illetve az idősebb körökben is. Ez a sok egy óriási 
 - A játék offline fog futni a játékos számítógépén.
 - A UI-nak egyszerűnek és letisztultak kell lennie, hogy mindenki számára érthető legyen a játék kezelése, illetve a célja.
 
-# 3. Rendszerre vonatkozó pályázat/törvények/rendeletek/szabványok és ajánlások
-
-# 4. Jelenlegi üzleti folyamatok modellje
+# 3. Jelenlegi üzleti folyamatok modellje
 
 - A játék jelenleg sehol sem érhető el.
 - A játék tervezés alatt áll.
 
-# 5. Igényelt üzleti folyamatok modellje
+# 4. Igényelt üzleti folyamatok modellje
 
 - A játék bármikor játszható.
 - A játék használatához, szükséges lesz egy eszkőz, amely biztosítja a szükséges erőforrásokat. Illetve szükséges a program egy másolatával rendelkezni.
@@ -27,7 +25,7 @@ hanem a középkorúak illetve az idősebb körökben is. Ez a sok egy óriási 
 - A játék akkor ér véget, ha: a játékosnak nem sikerül kikerülni az akadály; az eszköz, amit játék közben használ meghibásodik.
 - A játékot befejezően, a játékos dönthet, hogy elhagyja a játékot, vagy újra próbálja.
 
-# 6. Követelménylista
+# 5. Követelménylista
 - Gyors betöltődés.
 - Használható menü.
 - Egyértelmű játékvezérlés.
@@ -35,10 +33,10 @@ hanem a középkorúak illetve az idősebb körökben is. Ez a sok egy óriási 
 - Minimalista kinézet.
 - Könnyen alakítható pályák.
 - A kamera kövesse a karaktert játék közben.
-# 7. Irányított és szabad szöveges riportok szövege
 
-# 8. Fogalomszótár
+# 6. Fogalomszótár
 
 - Pixel art - digitális művészet olyan formája, ahol a képeket pixel szinten szerkesztik. Ez a stílus a 8 és 16 bites számítógépekből, videojáték-konzolokból
 származik.
 - 2D-s sík - egy X, vízszintes valamint egy Y, függőleges koordinátából álló tér.
+- UI - Felhaználói felület, az a konkrét rendszer, amellyel a felhasználónak érintkeznie kell, amikor az adott terméket, vagy szolgáltatást igénybe veszi
