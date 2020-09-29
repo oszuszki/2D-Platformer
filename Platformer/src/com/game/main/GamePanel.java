@@ -1,5 +1,7 @@
 package com.game.main;
 
+import com.game.gamestate.GameStateManager;
+
 import javax.swing.JPanel;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -46,7 +48,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
     		 repaint();
     		 
     		 elapsed = System.nanoTime() - start;
-    		 wait = targetTime = elapsed / 1000000;
+    		 wait = targetTime - elapsed / 100000000;
     		 
     		 if(wait <0) {
     			 wait=5;
