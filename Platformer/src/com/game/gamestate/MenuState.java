@@ -2,17 +2,19 @@ package com.game.gamestate;
 
 import com.game.main.GamePanel;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
+import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 
 
 public class MenuState extends GameState {
 
 	private String[] options = {"Start","Help","Quit"};
 	private int currentSelection = 0;
-	
+
+
 	public MenuState(GameStateManager gsm) {
 		super(gsm);
 		}
@@ -24,20 +26,19 @@ public class MenuState extends GameState {
 	}
 	public void draw(Graphics g) {
 		
-		g.setColor(new Color(50,100,150));
+		g.setColor(new Color(40,74,67));
 		g.fillRect(0, 0, GamePanel.WIDTH, GamePanel.HEIGHT);
 		
 		
 		for (int i =0; i < options.length; i++) {
-			if(i == currentSelection) {
-				g.setColor(Color.GREEN);
+			if (i == currentSelection) {
+				g.setColor(new Color(181, 224, 186));
+			} else {
+				g.setColor(new Color(76, 143, 130));
 			}
-			else {
-				g.setColor(Color.BLACK);
-			}
-			
+
 			g.setFont(new Font("Arial", Font.PLAIN, 72));
-			g.drawString(options[i], GamePanel.WIDTH/2 -75, 150 + i * 150);
+			g.drawString(options[i], GamePanel.WIDTH / 2 - 75, 150 + i * 150);
 		}
 	}
 	public void keyPressed(int k) {
