@@ -109,7 +109,7 @@ public class Player {
 	}
 
 	public void draw(Graphics g) {
-		g.setColor(Color.BLACK);
+		g.setColor(new Color(120, 179, 146));
 		g.fillRect((int) x, (int) y, width, height);
 	}
 
