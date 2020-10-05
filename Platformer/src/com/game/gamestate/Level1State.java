@@ -18,10 +18,10 @@ public class Level1State extends GameState{
     @Override
     public void init() {
         player = new Player(30, 30);
-        map = new Map("/Maps/map1.map");
+        map = new Map("/res/Maps/map1.map");
 
-        xOffset = -200;
-        yOffset = -400;
+        xOffset = 0;
+        yOffset = 0;
     }
 
     @Override
@@ -32,8 +32,8 @@ public class Level1State extends GameState{
 
     @Override
     public void draw(Graphics g) {
-        player.draw(g);
         map.draw(g);
+        player.draw(g);
     }
 
     @Override
