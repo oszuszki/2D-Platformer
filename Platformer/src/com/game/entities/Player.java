@@ -120,6 +120,8 @@ public class Player {
 			left = true;
 		if (k == KeyEvent.VK_W && !jumping && !falling)
 			jumping = true;
+		if (k == KeyEvent.VK_ESCAPE)
+			System.exit(0);
 	}
 
 	public void keyReleased(int k) {

@@ -4,8 +4,7 @@ import com.game.gamestate.GameStateManager;
 import com.game.resources.Images;
 
 import javax.swing.JPanel;
-import java.awt.Dimension;
-import java.awt.Graphics;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -15,17 +14,18 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
     public static final  int WIDTH = 800;
     public static  final  int HEIGHT = 600;
 
-    private Thread thread;
-    private boolean isRunning = false;
+    public Thread thread;
+    public boolean isRunning = false;
     
     private int FPS =60;
     private long targetTime = 1000/FPS;
     
     private GameStateManager gsm;
-    
+
+
     public GamePanel(){
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
-        
+
         addKeyListener(this);
         setFocusable(true);
         
@@ -34,7 +34,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
         start();
     }
     
-    private void start() {
+    public void start() {
     	isRunning = true;
     	thread = new Thread(this);
     	thread.start();
@@ -70,7 +70,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
     
     public void paintComponent(Graphics g) {
     	super.paintComponent(g);
-    	
     	g.clearRect(0, 0, WIDTH, HEIGHT);
     	gsm.draw(g);
     }

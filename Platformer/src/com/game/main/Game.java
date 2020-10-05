@@ -1,8 +1,10 @@
 package com.game.main;
 
-import java.awt.BorderLayout;
+import java.awt.*;
 
 import javax.swing.JFrame;
+
+
 
 public class Game {
 

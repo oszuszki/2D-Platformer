@@ -23,6 +23,7 @@ public class Map {
     }
 
     public void draw(Graphics g) {
+
         for(int i =0; i < blocks.length; i++){
             for(int j = 0; j < blocks[0].length; j++){
                 blocks[i][j].draw(g);

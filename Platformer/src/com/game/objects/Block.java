@@ -1,6 +1,8 @@
 package com.game.objects;
 
 import com.game.gamestate.GameState;
+import com.game.gamestate.GameStateManager;
+import com.game.gamestate.Level1State;
 import com.game.resources.Images;
 
 import java.awt.*;
@@ -8,8 +10,9 @@ import java.awt.*;
 public class Block extends Rectangle {
     static final long serialVersion=1L;
 
-    public static final int blockSize=102;
+    public static final int blockSize=65;
     private int id;
+
 
     public Block(int x,int y, int id){
         setBounds(x,y,blockSize,blockSize);
@@ -17,8 +20,10 @@ public class Block extends Rectangle {
     }
 
     public void draw (Graphics g){
-    	if(id != 0)
+    	if(id == 1)
         g.drawImage(Images.blocks[id - 1],x - (int) GameState.xOffset ,y -(int) GameState.yOffset,width,height, null);
+    	else if (id == 0)
+    	    g.drawImage(Images.blocks[1],x - (int) GameState.xOffset ,y -(int) GameState.yOffset,width,height, null);
     }
     
     public void setID(int id) {
