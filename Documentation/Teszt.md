@@ -39,6 +39,7 @@
       * Történt esemény: Karakterünk jobra mozog.
       
   -Egyébb gombok:
+  
     - "ESC" gomb megnyomása.
     
       * Várt esemény: Kilép a programból.
