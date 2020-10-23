@@ -1,16 +1,16 @@
 package com.game.gamestate;
 
+import com.game.gamestate.Levels.Level1State;
+import com.game.gamestate.Levels.Level2State;
 import com.game.main.GamePanel;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
+
+import static com.game.entities.Player.level_counter;
 
 
 public class MenuState extends GameState {
-
 	private String[] options = {"Start","Help","Quit"};
 	private int currentSelection = 0;
 

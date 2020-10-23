@@ -1,8 +1,6 @@
 package com.game.objects;
 
 import com.game.gamestate.GameState;
-import com.game.gamestate.GameStateManager;
-import com.game.gamestate.Level1State;
 import com.game.resources.Images;
 
 import java.awt.*;
@@ -24,6 +22,8 @@ public class Block extends Rectangle {
         g.drawImage(Images.blocks[id - 1],x - (int) GameState.xOffset ,y -(int) GameState.yOffset,width,height, null);
     	else if (id == 0)
     	    g.drawImage(Images.blocks[1],x - (int) GameState.xOffset ,y -(int) GameState.yOffset,width,height, null);
+    	else if (id == 2)
+            g.drawImage(Images.blocks[2],x - (int) GameState.xOffset ,y -(int) GameState.yOffset,width,height, null);
     }
     
     public void setID(int id) {

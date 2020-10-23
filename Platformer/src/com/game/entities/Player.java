@@ -1,12 +1,16 @@
 package com.game.entities;
 
 import com.game.gamestate.GameState;
+import com.game.gamestate.GameStateManager;
+import com.game.gamestate.Levels.Level2State;
+import com.game.gamestate.MenuState;
 import com.game.main.GamePanel;
 import com.game.objects.Block;
 import com.game.physics.Collison;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.util.Stack;
 
 public class Player {
 
@@ -18,11 +22,16 @@ public class Player {
 	private double jumpSpeed = 5;
 	private double currentJumpSpeed = jumpSpeed;
 
+	private boolean  portal = false;
+	public static int level_counter = 1;
+
 	private double maxFallSpeed = 5;
 	private double currentFallSpeed = 0.1;
 
 	private boolean topCollision = false;
 	private double moveSpeed = 2.5;
+
+	private GameStateManager gsm;
 
 	public Player(int width, int height) {
 		x = GamePanel.WIDTH / 2;
@@ -31,11 +40,22 @@ public class Player {
 		this.height = height;
 	}
 
-	public void tick(Block[][] b) {
+	public void tick(Block[][] b) { //portal
+		for (int i = 0; i < b.length; i++) {
+			for (int j = 0; j < b[0].length; j++) {
+				if (b[i][j].getID() == 2) {
+					// right
+					if (Collison
+							.playerBlock(new Point((int) x + width + (int) GameState.xOffset,
+									(int) y + (int) GameState.yOffset + 2), b[i][j])
+							|| Collison.playerBlock(new Point((int) x + width + (int) GameState.xOffset,
+							(int) y + height + (int) GameState.yOffset - 1), b[i][j])) {
+						portal = true;
+				}}}}
 
 		for (int i = 0; i < b.length; i++) {
 			for (int j = 0; j < b[0].length; j++) {
-				if (b[i][j].getID() != 0) {
+				if (b[i][j].getID() != 0 && b[i][j].getID() != 2) {
 					// right
 					if (Collison
 							.playerBlock(new Point((int) x + width + (int) GameState.xOffset,
@@ -122,6 +142,11 @@ public class Player {
 			jumping = true;
 		if (k == KeyEvent.VK_ESCAPE)
 			System.exit(0);
+		if (k == KeyEvent.VK_E && portal) {
+			level_counter++;
+			portal = false;
+			GameStateManager.states.push(new Level2State(gsm));
+			}
 	}
 
 	public void keyReleased(int k) {

@@ -17,6 +17,7 @@ public abstract class GameState {
 
 		init();
 	}
+
 	public abstract void init();
 	public abstract void tick();
 	public abstract void draw(Graphics g);
