@@ -1,8 +1,8 @@
 package com.game.gamestate.Levels;
 
 import com.game.entities.Player;
-import com.game.gamestate.GameState;
-import com.game.gamestate.GameStateManager;
+import com.game.gamestate.Game.GameState;
+import com.game.gamestate.Game.GameStateManager;
 import com.game.mapping.Map;
 
 import java.awt.*;

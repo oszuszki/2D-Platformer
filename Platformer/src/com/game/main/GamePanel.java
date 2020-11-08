@@ -1,6 +1,6 @@
 package com.game.main;
 
-import com.game.gamestate.GameStateManager;
+import com.game.gamestate.Game.GameStateManager;
 import com.game.resources.Images;
 
 import javax.swing.JPanel;

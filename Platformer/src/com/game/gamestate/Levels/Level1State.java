@@ -1,14 +1,11 @@
 package com.game.gamestate.Levels;
 
 import com.game.entities.Player;
-import com.game.gamestate.GameState;
-import com.game.gamestate.GameStateManager;
+import com.game.gamestate.Game.GameState;
+import com.game.gamestate.Game.GameStateManager;
 import com.game.mapping.Map;
-import com.game.objects.Block;
 
 import java.awt.Graphics;
-
-import static com.game.entities.Player.level_counter;
 
 public class Level1State extends GameState {
 

@@ -1,16 +1,14 @@
 package com.game.entities;
 
-import com.game.gamestate.GameState;
-import com.game.gamestate.GameStateManager;
+import com.game.gamestate.Game.GameState;
+import com.game.gamestate.Game.GameStateManager;
 import com.game.gamestate.Levels.Level2State;
-import com.game.gamestate.MenuState;
 import com.game.main.GamePanel;
 import com.game.objects.Block;
 import com.game.physics.Collison;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.util.Stack;
 
 public class Player {
 

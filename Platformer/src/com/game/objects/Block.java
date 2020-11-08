@@ -1,6 +1,6 @@
 package com.game.objects;
 
-import com.game.gamestate.GameState;
+import com.game.gamestate.Game.GameState;
 import com.game.resources.Images;
 
 import java.awt.*;
