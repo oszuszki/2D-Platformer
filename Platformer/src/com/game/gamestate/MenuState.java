@@ -1,16 +1,17 @@
 package com.game.gamestate;
 
-import com.game.gamestate.Game.GameState;
-import com.game.gamestate.Game.GameStateManager;
 import com.game.gamestate.Levels.Level1State;
+import com.game.gamestate.Levels.Level2State;
 import com.game.main.GamePanel;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
+import static com.game.entities.Player.level_counter;
+
 
 public class MenuState extends GameState {
-	private String[] options = {"Start","Help","Quit"};
+	private String[] options = {"Levels","Help","Quit"};
 	private int currentSelection = 0;
 
 
@@ -54,9 +55,9 @@ public class MenuState extends GameState {
 		}
 		if(k == KeyEvent.VK_ENTER) {
 			if(currentSelection == 0) {
-				gsm.states.push(new Level1State(gsm));
+				gsm.states.push(new MenuLevelState(gsm));
 			} else if(currentSelection == 1) {
-				
+				gsm.states.push(new MenuHelpState(gsm));
 			} else if(currentSelection == 2) {
 				System.exit(0);
 			}
