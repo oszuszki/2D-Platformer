@@ -41,12 +41,12 @@ public class MenuState extends GameState {
 		}
 	}
 	public void keyPressed(int k) {
-		if(k == KeyEvent.VK_DOWN) {
+		if(k == KeyEvent.VK_DOWN | k == KeyEvent.VK_S) {
 			currentSelection++;
 			if(currentSelection >= options.length) {
 				currentSelection = 0;
 			}
-		}else if(k == KeyEvent.VK_UP) {
+		}else if(k == KeyEvent.VK_UP | k == KeyEvent.VK_W) {
 			currentSelection--;
 			if(currentSelection<0) {
 				currentSelection = options.length -1;
