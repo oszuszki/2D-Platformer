@@ -1,7 +1,10 @@
 package com.game.gamestate;
 
+import com.game.gamestate.Game.GameState;
+import com.game.gamestate.Game.GameStateManager;
 import com.game.gamestate.Levels.Level1State;
 import com.game.main.GamePanel;
+
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
