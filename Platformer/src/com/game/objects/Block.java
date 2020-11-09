@@ -2,36 +2,50 @@ package com.game.objects;
 
 import com.game.gamestate.Game.GameState;
 import com.game.resources.Images;
-
-import java.awt.*;
+import java.awt.Graphics;
+import java.awt.Rectangle;
+import java.awt.image.ImageObserver;
 
 public class Block extends Rectangle {
-    static final long serialVersion=1L;
-
-    public static final int blockSize=65;
+    static final long serialVersion = 1L;
+    public static final int blockSize = 65;
     private int id;
 
-
-    public Block(int x,int y, int id){
-        setBounds(x,y,blockSize,blockSize);
+    public Block(int x, int y, int id) {
+        this.setBounds(x, y, 65, 65);
         this.id = id;
     }
 
-    public void draw (Graphics g){
-    	if(id == 1)
-        g.drawImage(Images.blocks[id - 1],x - (int) GameState.xOffset ,y -(int) GameState.yOffset,width,height, null);
-    	else if (id == 0)
-    	    g.drawImage(Images.blocks[1],x - (int) GameState.xOffset ,y -(int) GameState.yOffset,width,height, null);
-    	else if (id == 2)
-            g.drawImage(Images.blocks[2],x - (int) GameState.xOffset ,y -(int) GameState.yOffset,width,height, null);
-    }
-    
-    public void setID(int id) {
-    	this.id = id;
-    }
-    
-    public int getID() {
-    	return id;
+    public void draw(Graphics g) {
+        if (this.id == 1) {
+            g.drawImage(Images.blocks[this.id - 1], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
+        } else if (this.id == 0) {
+            g.drawImage(Images.blocks[1], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
+        } else if (this.id == 2) {
+            g.drawImage(Images.blocks[2], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
+        } else if (this.id == 3) {
+            g.drawImage(Images.blocks[3], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
+        } else if (this.id == 4) {
+            g.drawImage(Images.blocks[4], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
+        } else if (this.id == 5) {
+            g.drawImage(Images.blocks[5], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
+        } else if (this.id == 6) {
+            g.drawImage(Images.blocks[6], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
+        } else if (this.id == 7) {
+            g.drawImage(Images.blocks[7], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
+        } else if (this.id == 8) {
+            g.drawImage(Images.blocks[8], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
+        } else if (this.id == 9) {
+            g.drawImage(Images.blocks[9], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
+        }
+
     }
 
+    public void setID(int id) {
+        this.id = id;
+    }
+
+    public int getID() {
+        return this.id;
+    }
 }
