@@ -23,19 +23,19 @@ public class Block extends Rectangle {
             g.drawImage(Images.blocks[1], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
         } else if (this.id == 2) {
             g.drawImage(Images.blocks[2], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
-        } else if (this.id == 3) {
+        } else if (this.id == 21) {
             g.drawImage(Images.blocks[3], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
-        } else if (this.id == 4) {
+        } else if (this.id == 22) {
             g.drawImage(Images.blocks[4], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
-        } else if (this.id == 5) {
+        } else if (this.id == 23) {
             g.drawImage(Images.blocks[5], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
-        } else if (this.id == 6) {
+        } else if (this.id == 24) {
             g.drawImage(Images.blocks[6], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
-        } else if (this.id == 7) {
+        } else if (this.id == 25) {
             g.drawImage(Images.blocks[7], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
-        } else if (this.id == 8) {
+        } else if (this.id == 26) {
             g.drawImage(Images.blocks[8], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
-        } else if (this.id == 9) {
+        } else if (this.id == 27) {
             g.drawImage(Images.blocks[9], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
         }
 
