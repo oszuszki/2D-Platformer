@@ -53,7 +53,7 @@ public class Player {
 
 		for (int i = 0; i < b.length; i++) {
 			for (int j = 0; j < b[0].length; j++) {
-				if (b[i][j].getID() != 0 && b[i][j].getID() != 2) {
+				if (b[i][j].getID() == 1) {
 					// right
 					if (Collison
 							.playerBlock(new Point((int) x + width + (int) GameState.xOffset,
