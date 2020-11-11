@@ -6,9 +6,12 @@ import com.game.gamestate.Levels.Level2State;
 import com.game.main.GamePanel;
 import com.game.objects.Block;
 import com.game.physics.Collison;
+import com.game.resources.Images;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.awt.image.ImageObserver;
+import java.util.Random;
 
 public class Player {
 
@@ -28,6 +31,9 @@ public class Player {
 
 	private boolean topCollision = false;
 	private double moveSpeed = 2.5;
+
+	private int x_pic = 170;
+	private int y_pic = 183;
 
 	private GameStateManager gsm;
 
@@ -112,6 +118,8 @@ public class Player {
 				currentJumpSpeed = jumpSpeed;
 				jumping = false;
 				falling = true;
+
+				y_pic = y_pic - 1; //not the best, but its work...
 			}
 		}
 		if (falling) {
@@ -127,8 +135,15 @@ public class Player {
 	}
 
 	public void draw(Graphics g) {
-		g.setColor(new Color(120, 179, 146));
-		g.fillRect((int) x, (int) y, width, height);
+		//g.setColor(new Color(120, 179, 146));
+		//g.fillRect((int) x, (int) y, width, height);
+		if (!right && !left){
+			g.drawImage(Images.blocks[11],  x_pic, y_pic, null);
+		}
+		if (left)
+			g.drawImage(Images.blocks[10],  x_pic, y_pic, null);
+		if (right)
+			g.drawImage(Images.blocks[11],  x_pic, y_pic, null);
 	}
 
 	public void keyPressed(int k) {
