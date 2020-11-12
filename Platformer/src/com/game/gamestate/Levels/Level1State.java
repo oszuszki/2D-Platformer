@@ -7,6 +7,8 @@ import com.game.mapping.Map;
 
 import java.awt.Graphics;
 
+import static com.game.entities.Player.level_counter;
+
 public class Level1State extends GameState {
 
     private Player player;
@@ -18,7 +20,11 @@ public class Level1State extends GameState {
 
     @Override
     public void init() {
+        if (level_counter == 1)
             map = new Map("/res/Maps/map1.map");
+        else if (level_counter == 2)
+            map = new Map("/res/Maps/map2.map");
+
             player = new Player(30, 30);
             xOffset = 0;
             yOffset = 0;

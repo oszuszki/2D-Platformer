@@ -9,7 +9,7 @@ public class Images {
 	public static BufferedImage[] blocks;
 
 	public Images() {
-		blocks = new BufferedImage[14];
+		blocks = new BufferedImage[15];
 
 		try {
 			blocks[0] = ImageIO.read(this.getClass().getResourceAsStream("/res/Blocks/brick_dark.png"));
@@ -26,6 +26,7 @@ public class Images {
 			blocks[11] = ImageIO.read(this.getClass().getResourceAsStream("/res/Player/player_L1.png")); //player
 			blocks[12] = ImageIO.read(this.getClass().getResourceAsStream("/res/Player/player_R.png")); //player
 			blocks[13] = ImageIO.read(this.getClass().getResourceAsStream("/res/Player/player_R1.png")); //player
+			blocks[14] = ImageIO.read(this.getClass().getResourceAsStream("/res/Blocks/trap2.png")); //trap block
 		} catch (IOException var2) {
 			var2.printStackTrace();
 		}

@@ -37,8 +37,11 @@ public class Block extends Rectangle {
             g.drawImage(Images.blocks[8], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
         } else if (this.id == 27) {
             g.drawImage(Images.blocks[9], this.x - (int)GameState.xOffset, this.y - (int)GameState.yOffset, this.width, this.height, (ImageObserver)null);
+        } else if (this.id == 3) {
+            g.drawImage(Images.blocks[14], this.x - (int) GameState.xOffset, this.y - (int) GameState.yOffset, this.width, this.height, (ImageObserver) null);
+        } else if (this.id == 4) {
+            g.drawImage(Images.blocks[0], this.x - (int) GameState.xOffset, this.y - (int) GameState.yOffset, this.width, this.height, (ImageObserver) null);
         }
-
     }
 
     public void setID(int id) {
