@@ -8,6 +8,7 @@ import com.game.objects.Block;
 import com.game.physics.Collison;
 import com.game.resources.Images;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.image.ImageObserver;
@@ -34,6 +35,8 @@ public class Player {
 
 	private int x_pic = 170;
 	private int y_pic = 183;
+	int left_animation, right_animation;
+	int Lframecounter, Rframecounter;
 
 	private GameStateManager gsm;
 
@@ -138,19 +141,56 @@ public class Player {
 		//g.setColor(new Color(120, 179, 146));
 		//g.fillRect((int) x, (int) y, width, height);
 		if (!right && !left){
-			g.drawImage(Images.blocks[11],  x_pic, y_pic, null);
+			if (left_animation > right_animation)
+				g.drawImage(Images.blocks[10],  x_pic, y_pic, null);
+			else
+				g.drawImage(Images.blocks[12],  x_pic, y_pic, null);
 		}
-		if (left)
-			g.drawImage(Images.blocks[10],  x_pic, y_pic, null);
-		if (right)
-			g.drawImage(Images.blocks[11],  x_pic, y_pic, null);
+		if (left) {
+			right_animation = 0;
+			if (Lframecounter < 100){
+				g.drawImage(Images.blocks[10],  x_pic, y_pic, null);
+				Lframecounter = Lframecounter + 10;
+				System.out.println(Lframecounter);
+			}
+			else if (Lframecounter < 200){
+				g.drawImage(Images.blocks[11],  x_pic, y_pic, null);
+				Lframecounter = Lframecounter + 10;
+				System.out.println(Lframecounter);
+			}
+			else if (Lframecounter < 300){
+				Lframecounter = 0;
+				System.out.println(Lframecounter);
+			}
+		}
+
+		if (right) {
+			left_animation = 0;
+			if (Rframecounter < 100){
+				g.drawImage(Images.blocks[12],  x_pic, y_pic, null);
+				Rframecounter = Rframecounter + 10;
+				System.out.println(Rframecounter);
+			}
+			else if (Rframecounter < 200){
+				g.drawImage(Images.blocks[13],  x_pic, y_pic, null);
+				Rframecounter = Rframecounter + 10;
+				System.out.println(Rframecounter);
+			}
+			else if (Rframecounter < 300){
+				Rframecounter = 0;
+				System.out.println(Rframecounter);
+			}
+		}
 	}
 
 	public void keyPressed(int k) {
-		if (k == KeyEvent.VK_D)
+		if (k == KeyEvent.VK_D){
 			right = true;
-		if (k == KeyEvent.VK_A)
+			right_animation++;
+		}
+		if (k == KeyEvent.VK_A){
 			left = true;
+			left_animation++;}
 		if (k == KeyEvent.VK_W && !jumping && !falling)
 			jumping = true;
 		if (k == KeyEvent.VK_ESCAPE)

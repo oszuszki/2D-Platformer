@@ -3,12 +3,13 @@ package com.game.resources;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import javax.imageio.ImageIO;
+import javax.swing.*;
 
 public class Images {
 	public static BufferedImage[] blocks;
 
 	public Images() {
-		blocks = new BufferedImage[12];
+		blocks = new BufferedImage[14];
 
 		try {
 			blocks[0] = ImageIO.read(this.getClass().getResourceAsStream("/res/Blocks/brick_dark.png"));
@@ -22,7 +23,9 @@ public class Images {
 			blocks[8] = ImageIO.read(this.getClass().getResourceAsStream("/res/Blocks/p_frame6.png"));
 			blocks[9] = ImageIO.read(this.getClass().getResourceAsStream("/res/Blocks/p_frame7.png"));
 			blocks[10] = ImageIO.read(this.getClass().getResourceAsStream("/res/Player/player_L.png")); //player
-			blocks[11] = ImageIO.read(this.getClass().getResourceAsStream("/res/Player/player_R.png")); //player
+			blocks[11] = ImageIO.read(this.getClass().getResourceAsStream("/res/Player/player_L1.png")); //player
+			blocks[12] = ImageIO.read(this.getClass().getResourceAsStream("/res/Player/player_R.png")); //player
+			blocks[13] = ImageIO.read(this.getClass().getResourceAsStream("/res/Player/player_R1.png")); //player
 		} catch (IOException var2) {
 			var2.printStackTrace();
 		}
