@@ -8,6 +8,7 @@ import com.game.main.GamePanel;
 import com.game.objects.Block;
 import com.game.physics.Collison;
 import com.game.resources.Images;
+import org.w3c.dom.Text;
 
 import javax.swing.*;
 import java.awt.*;
@@ -35,8 +36,9 @@ public class Player {
 
 	private int x_pic = 170;
 	private int y_pic = 183;
-	int left_animation, right_animation;
-	int Lframecounter, Rframecounter;
+	private int left_animation, right_animation;
+	private int Lframecounter, Rframecounter;
+	private static int death_counter;
 
 	private GameStateManager gsm;
 
@@ -70,6 +72,7 @@ public class Player {
 									(int) y + (int) GameState.yOffset + 2), b[i][j])
 							|| Collison.playerBlock(new Point((int) x + width + (int) GameState.xOffset,
 							(int) y + height + (int) GameState.yOffset - 1), b[i][j])) {
+						death_counter = death_counter + 1;
 						GameStateManager.states.push(new Level1State(gsm));
 					}
 					// left
@@ -78,6 +81,7 @@ public class Player {
 									(int) y + (int) GameState.yOffset + 2), b[i][j])
 							|| Collison.playerBlock(new Point((int) x + (int) GameState.xOffset - 2,
 							(int) y + height + (int) GameState.yOffset - 1), b[i][j])) {
+						death_counter = death_counter + 1;
 						GameStateManager.states.push(new Level1State(gsm));
 					}
 					// bottom
@@ -86,6 +90,7 @@ public class Player {
 									(int) y + height + (int) GameState.yOffset + 1), b[i][j])
 							|| Collison.playerBlock(new Point((int) x + width + (int) GameState.xOffset - 2,
 							(int) y + height + (int) GameState.yOffset + 1), b[i][j])) {
+						death_counter = death_counter + 1;
 						y = b[i][j].getY() - height - GameState.yOffset;
 						GameStateManager.states.push(new Level1State(gsm));
 					}
@@ -174,6 +179,16 @@ public class Player {
 	public void draw(Graphics g) {
 		//g.setColor(new Color(120, 179, 146));
 		//g.fillRect((int) x, (int) y, width, height);
+
+
+		g.setColor(new Color(216, 67, 21));
+		g.setFont(new Font("Arial", Font.BOLD, 20));
+		g.drawString("Deaths: " + death_counter, 15, 20);
+
+		g.setColor(new Color(216, 67, 21));
+		g.setFont(new Font("Arial", Font.BOLD, 20));
+		g.drawString("Level: " + level_counter, 15, 40);
+
 		if (!right && !left){
 			if (left_animation > right_animation)
 				g.drawImage(Images.blocks[10],  x_pic, y_pic, null);
