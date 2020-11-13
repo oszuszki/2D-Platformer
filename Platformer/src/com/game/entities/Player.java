@@ -177,14 +177,17 @@ public class Player {
 		//g.setColor(new Color(120, 179, 146));
 		//g.fillRect((int) x, (int) y, width, height);
 
+		g.setColor(new Color(216, 67, 21));
+		g.setFont(new Font("Arial", Font.BOLD, 20));
+		g.drawString("Name: " + pName, 15, 20);
 
 		g.setColor(new Color(216, 67, 21));
 		g.setFont(new Font("Arial", Font.BOLD, 20));
-		g.drawString("Deaths: " + death_counter, 15, 20);
+		g.drawString("Deaths: " + death_counter, 15, 40);
 
 		g.setColor(new Color(216, 67, 21));
 		g.setFont(new Font("Arial", Font.BOLD, 20));
-		g.drawString("Level: " + level_counter, 15, 40);
+		g.drawString("Level: " + level_counter, 15, 60);
 
 		if (!right && !left){
 			if (left_animation > right_animation)

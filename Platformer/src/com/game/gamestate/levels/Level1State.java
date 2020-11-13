@@ -18,7 +18,6 @@ public class Level1State extends GameState {
         super(gsm);
         this.pName=pName;
         player.setpName(pName);
-        System.out.println(player.getpName());
     }
 
     @Override
