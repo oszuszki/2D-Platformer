@@ -1,28 +1,24 @@
 package com.game.gamestate;
 
-import com.game.gamestate.Game.GameState;
-import com.game.gamestate.Game.GameStateManager;
-import com.game.gamestate.Levels.Level1State;
-import com.game.gamestate.Levels.Level2State;
+import com.game.gamestate.game.GameState;
+import com.game.gamestate.game.GameStateManager;
 import com.game.main.GamePanel;
 
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-import static com.game.entities.Player.level_counter;
-
 
 public class MenuState extends GameState {
 	private String[] options = {"Levels","Help","Quit"};
 	private int currentSelection = 0;
-
+	private String pName;
 
 	public MenuState(GameStateManager gsm) {
 		super(gsm);
 		}
 	public void init() {
-		
+		this.pName=GamePanel.pName;
 	}
 	public void tick() {
 		
@@ -58,7 +54,7 @@ public class MenuState extends GameState {
 		}
 		if(k == KeyEvent.VK_ENTER) {
 			if(currentSelection == 0) {
-				gsm.states.push(new MenuLevelState(gsm));
+				gsm.states.push(new MenuLevelState(gsm,pName));
 			} else if(currentSelection == 1) {
 				gsm.states.push(new MenuHelpState(gsm));
 			} else if(currentSelection == 2) {

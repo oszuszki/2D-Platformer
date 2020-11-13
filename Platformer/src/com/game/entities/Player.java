@@ -1,20 +1,15 @@
 package com.game.entities;
 
-import com.game.gamestate.Game.GameState;
-import com.game.gamestate.Game.GameStateManager;
-import com.game.gamestate.Levels.Level1State;
-import com.game.gamestate.Levels.Level2State;
+import com.game.gamestate.game.GameState;
+import com.game.gamestate.game.GameStateManager;
+import com.game.gamestate.levels.Level1State;
 import com.game.main.GamePanel;
 import com.game.objects.Block;
 import com.game.physics.Collison;
 import com.game.resources.Images;
-import org.w3c.dom.Text;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.awt.image.ImageObserver;
-import java.util.Random;
 
 public class Player {
 
@@ -42,6 +37,8 @@ public class Player {
 
 	private GameStateManager gsm;
 
+	private String pName;
+
 	public Player(int width, int height) {
 		x = GamePanel.WIDTH / 2;
 		y = GamePanel.HEIGHT / 2;
@@ -60,7 +57,7 @@ public class Player {
 							|| Collison.playerBlock(new Point((int) x + width + (int) GameState.xOffset,
 							(int) y + height + (int) GameState.yOffset - 1), b[i][j])) {
 						level_counter++;
-						GameStateManager.states.push(new Level1State(gsm));
+						GameStateManager.states.push(new Level1State(gsm,pName));
 				}}}}
 
 		for (int i = 0; i < b.length; i++) {  //trap
@@ -73,7 +70,7 @@ public class Player {
 							|| Collison.playerBlock(new Point((int) x + width + (int) GameState.xOffset,
 							(int) y + height + (int) GameState.yOffset - 1), b[i][j])) {
 						death_counter = death_counter + 1;
-						GameStateManager.states.push(new Level1State(gsm));
+						GameStateManager.states.push(new Level1State(gsm,pName));
 					}
 					// left
 					if (Collison
@@ -82,7 +79,7 @@ public class Player {
 							|| Collison.playerBlock(new Point((int) x + (int) GameState.xOffset - 2,
 							(int) y + height + (int) GameState.yOffset - 1), b[i][j])) {
 						death_counter = death_counter + 1;
-						GameStateManager.states.push(new Level1State(gsm));
+						GameStateManager.states.push(new Level1State(gsm,pName));
 					}
 					// bottom
 					if (Collison
@@ -92,7 +89,7 @@ public class Player {
 							(int) y + height + (int) GameState.yOffset + 1), b[i][j])) {
 						death_counter = death_counter + 1;
 						y = b[i][j].getY() - height - GameState.yOffset;
-						GameStateManager.states.push(new Level1State(gsm));
+						GameStateManager.states.push(new Level1State(gsm,pName));
 					}
 				}
 			}
@@ -243,5 +240,14 @@ public class Player {
 			right = false;
 		if (k == KeyEvent.VK_A)
 			left = false;
+	}
+
+
+	public String getpName() {
+		return pName;
+	}
+
+	public void setpName(String pName) {
+		this.pName = pName;
 	}
 }

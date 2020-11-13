@@ -1,6 +1,6 @@
 package com.game.main;
 
-import com.game.gamestate.Game.GameStateManager;
+import com.game.gamestate.game.GameStateManager;
 import com.game.resources.Images;
 
 import javax.swing.JPanel;
@@ -13,6 +13,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 
     public static final  int WIDTH = 800;
     public static  final  int HEIGHT = 600;
+    public static String pName;
 
     public Thread thread;
     public boolean isRunning = false;
@@ -23,14 +24,15 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
     private GameStateManager gsm;
 
 
-    public GamePanel(){
+
+    public GamePanel(String name){
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
 
         addKeyListener(this);
         setFocusable(true);
         
         new Images();
-        
+        this.pName=name;
         start();
     }
     
@@ -82,7 +84,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
     	gsm.keyReleased(e.getKeyCode());
     }
  
-    public void keyTyped(KeyEvent e) {
- 	
- }
+    public void keyTyped(KeyEvent e) { }
+
+
 }

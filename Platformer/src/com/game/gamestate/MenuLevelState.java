@@ -1,9 +1,9 @@
 package com.game.gamestate;
 
-import com.game.gamestate.Game.GameState;
-import com.game.gamestate.Game.GameStateManager;
-import com.game.gamestate.Levels.Level1State;
-import com.game.gamestate.Levels.Level2State;
+import com.game.gamestate.game.GameState;
+import com.game.gamestate.game.GameStateManager;
+import com.game.gamestate.levels.Level1State;
+import com.game.gamestate.levels.Level2State;
 import com.game.main.GamePanel;
 
 import java.awt.*;
@@ -15,10 +15,13 @@ import java.awt.event.KeyEvent;
 public class MenuLevelState extends GameState {
     private String[] options = {"Level 1","Level 2","Back"};
     private int currentSelection = 0;
+    private String pName;
 
-
-    public MenuLevelState(GameStateManager gsm) {
+    public MenuLevelState(GameStateManager gsm,String pName)
+    {
         super(gsm);
+        this.pName=pName;
+
     }
     public void init() {
 
@@ -57,7 +60,7 @@ public class MenuLevelState extends GameState {
         }
         if(k == KeyEvent.VK_ENTER) {
             if(currentSelection == 0) {
-                gsm.states.push(new Level1State(gsm));
+                gsm.states.push(new Level1State(gsm,pName));
             } else if(currentSelection == 1) {
                 gsm.states.push(new Level2State(gsm));
             } else if(currentSelection == 2) {

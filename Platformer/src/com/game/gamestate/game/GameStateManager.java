@@ -1,6 +1,5 @@
-package com.game.gamestate.Game;
+package com.game.gamestate.game;
 
-import com.game.gamestate.Game.GameState;
 import com.game.gamestate.MenuState;
 
 import java.awt.*;
@@ -10,7 +9,7 @@ import java.util.Stack;
 public class GameStateManager {
 
 	public static Stack<GameState> states;
-	
+
 	public GameStateManager() {
 		states = new Stack<GameState>();
 		states.push(new MenuState(this));
@@ -28,4 +27,6 @@ public class GameStateManager {
 	public void keyReleased(int k) {
 		states.peek().keyReleased(k);
 	}
+
+
 }

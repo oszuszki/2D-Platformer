@@ -1,4 +1,4 @@
-package com.game.gamestate.Game;
+package com.game.gamestate.game;
 
 import java.awt.Graphics;
 

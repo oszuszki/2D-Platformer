@@ -1,8 +1,7 @@
 package com.game.gamestate;
 
-import com.game.gamestate.Game.GameState;
-import com.game.gamestate.Game.GameStateManager;
-import com.game.gamestate.Levels.Level1State;
+import com.game.gamestate.game.GameState;
+import com.game.gamestate.game.GameStateManager;
 import com.game.main.GamePanel;
 
 

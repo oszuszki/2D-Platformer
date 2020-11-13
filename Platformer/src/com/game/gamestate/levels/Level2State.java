@@ -1,8 +1,8 @@
-package com.game.gamestate.Levels;
+package com.game.gamestate.levels;
 
 import com.game.entities.Player;
-import com.game.gamestate.Game.GameState;
-import com.game.gamestate.Game.GameStateManager;
+import com.game.gamestate.game.GameState;
+import com.game.gamestate.game.GameStateManager;
 import com.game.mapping.Map;
 
 import java.awt.*;
@@ -18,7 +18,7 @@ public class Level2State extends GameState {
 
     @Override
     public void init() {
-        map = new Map("/res/Maps/map2.map");
+        map = new Map("/res/maps/map2.map");
         player = new Player(30, 30);
 
         xOffset = 0;
