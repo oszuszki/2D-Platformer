@@ -10,7 +10,7 @@ import java.awt.event.KeyEvent;
 
 
 public class MenuHelpState extends GameState {
-    private String[] options = {"Sart","Help","Back"};
+    private String[] options = {"Back"};
     private int currentSelection = 0;
 
 
@@ -37,7 +37,7 @@ public class MenuHelpState extends GameState {
             }
 
             g.setFont(new Font("Arial", Font.PLAIN, 72));
-            g.drawString(options[i], GamePanel.WIDTH / 2 - 75, 150 + i * 150);
+            g.drawString(options[i], GamePanel.WIDTH / 2 - 75, 550 + i * 150);
         }
     }
     public void keyPressed(int k) {
@@ -54,10 +54,6 @@ public class MenuHelpState extends GameState {
         }
         if(k == KeyEvent.VK_ENTER) {
             if(currentSelection == 0) {
-
-            } else if(currentSelection == 1) {
-
-            } else if(currentSelection == 2) {
                 gsm.states.push(new MenuState(gsm));
             }
         }

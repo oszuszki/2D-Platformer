@@ -2,8 +2,7 @@ package com.game.gamestate;
 
 import com.game.gamestate.game.GameState;
 import com.game.gamestate.game.GameStateManager;
-import com.game.gamestate.levels.Level1State;
-import com.game.gamestate.levels.Level2State;
+import com.game.gamestate.levels.*;
 import com.game.main.GamePanel;
 
 import java.awt.*;
@@ -13,7 +12,7 @@ import java.awt.event.KeyEvent;
 
 
 public class MenuLevelState extends GameState {
-    private String[] options = {"Level 1","Level 2","Back"};
+    private String[] options = {"Level 1","Level 2","Level 3","Level 4","Level 5","Back"};
     private int currentSelection = 0;
     private String pName;
 
@@ -42,8 +41,8 @@ public class MenuLevelState extends GameState {
                 g.setColor(new Color(76, 243, 130));
             }
 
-            g.setFont(new Font("Arial", Font.PLAIN, 72));
-            g.drawString(options[i], GamePanel.WIDTH / 2 - 75, 150 + i * 150);
+            g.setFont(new Font("Arial", Font.PLAIN, 52));
+            g.drawString(options[i], GamePanel.WIDTH / 2 - 75, 100 + i * 70);
         }
     }
     public void keyPressed(int k) {
@@ -64,6 +63,12 @@ public class MenuLevelState extends GameState {
             } else if(currentSelection == 1) {
                 gsm.states.push(new Level2State(gsm));
             } else if(currentSelection == 2) {
+                gsm.states.push(new Level3State(gsm));
+            } else if(currentSelection == 3) {
+                gsm.states.push(new Level4State(gsm));
+            } else if(currentSelection == 4) {
+                gsm.states.push(new Level5State(gsm));
+            } else if(currentSelection == 5) {
                 gsm.states.push(new MenuState(gsm));
             }
         }
