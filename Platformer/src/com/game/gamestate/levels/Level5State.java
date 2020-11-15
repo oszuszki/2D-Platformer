@@ -27,7 +27,7 @@ public class Level5State extends GameState {
 
     @Override
     public void tick() {
-        player.tick(map.getBlocks());
+        player.tick(map.getBlocks(),map.getMovingBlocks());
     }
 
     @Override

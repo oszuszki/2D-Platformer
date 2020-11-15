@@ -21,7 +21,7 @@ public class MovingBlocks extends Rectangle {
     }
 
     public void tick(){
-        if(x + width - GameState.xOffset >= rightBound - GameState.xOffset && move != 1)
+        if(x + width - GameState.xOffset >= rightBound - GameState.xOffset && move != -1)
         {
             move *= -1;
         }

@@ -5,11 +5,13 @@ import com.game.gamestate.game.GameStateManager;
 import com.game.gamestate.levels.Level1State;
 import com.game.main.GamePanel;
 import com.game.objects.Block;
+import com.game.objects.MovingBlocks;
 import com.game.physics.Collison;
 import com.game.resources.Images;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 
 public class Player {
 
@@ -46,7 +48,7 @@ public class Player {
 		this.height = height;
 	}
 
-	public void tick(Block[][] b) { //portal
+	public void tick(Block[][] b, ArrayList<MovingBlocks> movingBlocks) { //portal
 		for (int i = 0; i < b.length; i++) {
 			for (int j = 0; j < b[0].length; j++) {
 				if (b[i][j].getID() == 2) {
@@ -134,6 +136,57 @@ public class Player {
 						y = b[i][j].getY() - height - GameState.yOffset;
 						falling = false;
 						topCollision = true;
+					} else {
+						if (!topCollision && !jumping) {
+							falling = true;
+						}
+					}
+				}
+			}
+		}
+
+		for(int i = 0; i < movingBlocks.size(); i++)
+		{
+			if(movingBlocks.get(i).getID() != 0)
+			{
+				if (movingBlocks.get(i).getID() == 1) {
+					// right
+					if (Collison
+							.playerMovingBlock(new Point((int) x + width + (int) GameState.xOffset,
+									(int) y + (int) GameState.yOffset + 2), movingBlocks.get(i))
+							|| Collison.playerMovingBlock(new Point((int) x + width + (int) GameState.xOffset,
+							(int) y + height + (int) GameState.yOffset - 1), movingBlocks.get(i))) {
+						right = false;
+					}
+					// left
+					if (Collison
+							.playerMovingBlock(new Point((int) x + (int) GameState.xOffset - 1,
+									(int) y + (int) GameState.yOffset + 2), movingBlocks.get(i))
+							|| Collison.playerMovingBlock(new Point((int) x + (int) GameState.xOffset - 2,
+							(int) y + height + (int) GameState.yOffset - 1), movingBlocks.get(i))) {
+						left = false;
+					}
+					// top
+					if (Collison.playerMovingBlock(
+							new Point((int) x + (int) GameState.xOffset + 2, (int) y + (int) GameState.yOffset),
+							movingBlocks.get(i))
+							|| Collison.playerMovingBlock(new Point((int) x + width + (int) GameState.xOffset - 2,
+							(int) y + (int) GameState.yOffset), movingBlocks.get(i))) {
+						jumping = false;
+						falling = true;
+					}
+					// bottom
+					if (Collison
+							.playerMovingBlock(new Point((int) x + (int) GameState.xOffset + 2,
+									(int) y + height + (int) GameState.yOffset + 1), movingBlocks.get(i))
+							|| Collison.playerMovingBlock(new Point((int) x + width + (int) GameState.xOffset - 2,
+							(int) y + height + (int) GameState.yOffset + 1), movingBlocks.get(i))) {
+						y = movingBlocks.get(i).getY() - height - GameState.yOffset;
+						falling = false;
+						topCollision = true;
+
+						GameState.xOffset += movingBlocks.get(i).getMove();
+
 					} else {
 						if (!topCollision && !jumping) {
 							falling = true;
