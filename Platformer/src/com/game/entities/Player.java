@@ -144,7 +144,6 @@ public class Player {
 				}
 			}
 		}
-
 		for(int i = 0; i < movingBlocks.size(); i++)
 		{
 			if(movingBlocks.get(i).getID() != 0)
