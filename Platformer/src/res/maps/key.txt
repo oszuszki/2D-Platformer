@@ -8,3 +8,9 @@
 
 3 -> trap spikes
 4 -> real trap
+
+//Mozgó elemek száma egy sor kihagyással a pálya alatt
+<kezdő x érték -1><kezdő y érték -1><block tipusa><bal határ><jobb határ>
+//tehát egy a 2-es x értéktől a 3-as y értékben 4 blockot mozgó block így néz ki:
+1 2 1 2 6
+//ha nincs mozgó elem akkor egy 0-t kell tenni
