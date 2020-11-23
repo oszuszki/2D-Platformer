@@ -18,7 +18,7 @@ public class Level3State extends GameState {
 
     @Override
     public void init() {
-        map = new Map("/res/maps/map2.map");
+        map = new Map("/res/maps/map3.map");
         player = new Player(30, 30);
 
         xOffset = 0;
@@ -28,6 +28,7 @@ public class Level3State extends GameState {
     @Override
     public void tick() {
         player.tick(map.getBlocks(),map.getMovingBlocks());
+        map.tick();
     }
 
     @Override
