@@ -13,4 +13,6 @@
 <kezdő x érték -1><kezdő y érték -1><block tipusa><bal határ><jobb határ>
 //tehát egy a 2-es x értéktől a 3-as y értékben 4 blockot mozgó block így néz ki:
 1 2 1 2 6
-//ha nincs mozgó elem akkor egy 0-t kell tenni
+// !!! ha nincs mozgó elem akkor egy 0-t kell tenni !!!
+// !!! minden mozgó block legkevesebb három elemet mozogjón, tehát 2 3 közti mozgás nem müködik,
+//  e helyet 2 4 vagy 1 3 mozgást használjunk !!!
