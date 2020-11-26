@@ -53,10 +53,14 @@ public class MenuLevelState extends GameState {
             }
         }else if(k == KeyEvent.VK_UP | k == KeyEvent.VK_W) {
             currentSelection--;
-            if(currentSelection<0) {
-                currentSelection = options.length -1;
+            if (currentSelection < 0) {
+                currentSelection = options.length - 1;
             }
         }
+        if (k == KeyEvent.VK_ESCAPE){
+            gsm.states.push(new MenuState(gsm));
+            }
+
         if(k == KeyEvent.VK_ENTER) {
             if(currentSelection == 0) {
                 level_counter = 1;

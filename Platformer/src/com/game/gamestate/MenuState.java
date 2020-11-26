@@ -52,6 +52,9 @@ public class MenuState extends GameState {
 				currentSelection = options.length -1;
 			}
 		}
+		if (k == KeyEvent.VK_ESCAPE){
+			System.exit(0);
+		}
 		if(k == KeyEvent.VK_ENTER) {
 			if(currentSelection == 0) {
 				gsm.states.push(new MenuLevelState(gsm,pName));
