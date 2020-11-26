@@ -1,5 +1,6 @@
 package com.game.entities;
 
+import com.game.gamestate.MenuState;
 import com.game.gamestate.game.GameState;
 import com.game.gamestate.game.GameStateManager;
 import com.game.gamestate.levels.Level1State;
@@ -287,7 +288,8 @@ public class Player {
 		if (k == KeyEvent.VK_W && !jumping && !falling)
 			jumping = true;
 		if (k == KeyEvent.VK_ESCAPE)
-			System.exit(0);
+			//System.exit(0);
+			GameStateManager.states.push(new MenuState(gsm));
 	}
 
 	public void keyReleased(int k) {
