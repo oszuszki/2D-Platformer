@@ -8,7 +8,7 @@ import com.game.main.GamePanel;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-
+import static com.game.entities.Player.level_counter;
 
 
 public class MenuLevelState extends GameState {
@@ -59,18 +59,24 @@ public class MenuLevelState extends GameState {
         }
         if(k == KeyEvent.VK_ENTER) {
             if(currentSelection == 0) {
+                level_counter = 1;
                 gsm.states.push(new Level1State(gsm,pName));
             } else if(currentSelection == 1) {
-                gsm.states.push(new Level2State(gsm));
+                level_counter = 2;
+                gsm.states.push(new Level1State(gsm,pName));
             } else if(currentSelection == 2) {
-                gsm.states.push(new Level3State(gsm));
+                level_counter = 3;
+                gsm.states.push(new Level1State(gsm,pName));
             } else if(currentSelection == 3) {
-                gsm.states.push(new Level4State(gsm));
+                level_counter = 4;
+                gsm.states.push(new Level1State(gsm,pName));
             } else if(currentSelection == 4) {
-                gsm.states.push(new Level5State(gsm));
+                level_counter = 5;
+                gsm.states.push(new Level1State(gsm,pName));
             } else if(currentSelection == 5) {
                 gsm.states.push(new MenuState(gsm));
             }
+
         }
     }
     public void keyReleased(int k) {
