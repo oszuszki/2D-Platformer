@@ -27,7 +27,12 @@ public class Level1State extends GameState {
             map = new Map("/res/maps/map1.map");
         else if (level_counter == 2)
             map = new Map("/res/maps/map2.map");
-
+        else if (level_counter == 3)
+            map = new Map("/res/maps/map3.map");
+        else if (level_counter == 4)
+            map = new Map("/res/maps/map4.map");
+        else if (level_counter == 5)
+            map = new Map("/res/maps/map5.map");
             player = new Player(30, 30);
             xOffset = 0;
             yOffset = 0;
