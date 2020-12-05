@@ -54,7 +54,7 @@ hanem a középkorúak illetve az idősebb körökben is. Ez a sok egy óriási 
 # 8. Forgatókönyvek
 
 A játék megnyitásakor a felhasználó három lehetőség közűl választhat, melyek a : Start; Help; Quit. 
-  -A 'Start' gomb megnyomásával értelemszerűen elkezdődik a játék, ami az első 'map' felületére teszi az irányítható karakterünket. Ezt a karaktert kell eljuttasuk a pálya végéig anélkűl, hogy meghalna a karakterünk. A mappokon külömböző ügyességi feladatok lesznek amit a karakter mozgatás és ugrás segítségével tudunk elvégezni. A mappon töbféle akadályt is fell lesz állítva a felhasználói élmény érdekében.  
+  -A 'Level' gomb megnyomásával eldönthetjuük mélyk szinten kezdünk, ezt kiválasztva értelemszerűen elkezdődik a játék. A karaktert kell eljuttasuk a pálya végéig anélkűl, hogy meghalna a karakterünk. A mappokon külömböző ügyességi feladatok lesznek amit a karakter mozgatás és ugrás segítségével tudunk elvégezni. A mappon töbféle akadályt is fell lesz állítva a felhasználói élmény érdekében.  
   -A 'Help' gomb megnyomásával egy egyszerű magyarázat lesz a karakterünk mozgatásához tartozó gombokról. Ezek a gombok lesznek a [W, A, S, D].
   -A 'Quit' gomb magától érthetően pedig a játék kikapcsolása funkciót fogja ellátni. 
 
@@ -63,13 +63,12 @@ A játék megnyitásakor a felhasználó három lehetőség közűl választhat,
 
 Játék megynyitása után, megjelenik egy egyszerü három menüpontból álló menü:
 
-- Start - elindítja a játékot.
+- Levels - behozza egy ablakot amin kiválaszthatjuk mélyk pályán kezdjünk.
 - Help - a felhasználónak segítséget nyújt a játék használatában.
 - Quit - kilép a játékból.
 
-A "Start" gombra kattintva elkezdődik a játék, ahol lehetőség van W,A,S,D-vel irányítani a karaktert 2D-s síkon, 
-platformokon ugrálva haladhatunk a cél felé különböző akadályokkal megküzdve, a cél elérésével a játékos dönti el, 
-hogy kilép a jétékból, vagy újat kezd.
+A "Levels" gombra kattintva behoz egy ablakot amin eldönthetjük mélyk pályán kezdjünk. A szintet kivályasztva elkezdődik a játék, ahol lehetőség van W,A,S,D-vel irányítani a karaktert 2D-s síkon, 
+platformokon ugrálva haladhatunk a cél felé különböző akadályokkal megküzdve, a cél elérésével a játékos a következő szintre ugrik.
 
 A játék kinézete minimális, pixel art stílusu, a gyors betöltődés és az egyszerű kivitelezés érdekében.
 
