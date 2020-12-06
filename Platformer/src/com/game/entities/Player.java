@@ -31,9 +31,7 @@ public class Player {
 
 	private boolean topCollision = false;
 	private double moveSpeed = 2.5;
-
-	private int x_pic = 170;
-	private int y_pic = 183;
+	
 	private int left_animation, right_animation;
 	private int Lframecounter, Rframecounter;
 	private static int death_counter;
@@ -210,8 +208,6 @@ public class Player {
 				currentJumpSpeed = jumpSpeed;
 				jumping = false;
 				falling = true;
-
-				y_pic = y_pic - 1; //not the best, but its work...
 			}
 		}
 		if (falling) {
@@ -227,8 +223,6 @@ public class Player {
 	}
 
 	public void draw(Graphics g) {
-		//g.setColor(new Color(120, 179, 146));
-		//g.fillRect((int) x, (int) y, width, height);
 
 		g.setColor(new Color(216, 67, 21));
 		g.setFont(new Font("Arial", Font.BOLD, 20));
@@ -244,18 +238,18 @@ public class Player {
 
 		if (!right && !left){
 			if (left_animation > right_animation)
-				g.drawImage(Images.blocks[10],  x_pic, y_pic, null);
+				g.drawImage(Images.blocks[10],  ((int) x - 230), ((int) y - 117), null);
 			else
-				g.drawImage(Images.blocks[12],  x_pic, y_pic, null);
+				g.drawImage(Images.blocks[12], ((int) x - 230) , ((int) y - 117), null);
 		}
 		if (left) {
 			right_animation = 0;
 			if (Lframecounter < 100){
-				g.drawImage(Images.blocks[10],  x_pic, y_pic, null);
+				g.drawImage(Images.blocks[10],  ((int) x - 230), ((int) y - 117), null);
 				Lframecounter = Lframecounter + 10;
 			}
 			else if (Lframecounter < 200){
-				g.drawImage(Images.blocks[11],  x_pic, y_pic, null);
+				g.drawImage(Images.blocks[11],  ((int) x - 230), ((int) y - 117), null);
 				Lframecounter = Lframecounter + 10;
 			}
 			else if (Lframecounter < 300)
@@ -265,11 +259,11 @@ public class Player {
 		if (right) {
 			left_animation = 0;
 			if (Rframecounter < 100){
-				g.drawImage(Images.blocks[12],  x_pic, y_pic, null);
+				g.drawImage(Images.blocks[12],  ((int) x - 230), ((int) y - 117), null);
 				Rframecounter = Rframecounter + 10;
 			}
 			else if (Rframecounter < 200){
-				g.drawImage(Images.blocks[13],  x_pic, y_pic, null);
+				g.drawImage(Images.blocks[13],  ((int) x - 230), ((int) y - 117), null);
 				Rframecounter = Rframecounter + 10;
 			}
 			else if (Rframecounter < 300)
